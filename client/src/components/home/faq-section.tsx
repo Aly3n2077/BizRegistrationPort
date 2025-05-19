@@ -133,7 +133,7 @@ export default function FaqSection() {
                     <AccordionTrigger className="px-6 py-5 text-left hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent transition-all duration-300 font-medium text-gray-800 group">
                       <div className="flex items-center">
                         <div className="bg-gradient-to-br from-primary-600 to-primary-700 w-10 h-10 rounded-xl flex items-center justify-center mr-4 text-white shadow-lg shadow-primary/20 transform transition-all duration-300 group-data-[state=open]:rotate-6">
-                          <ChevronRight className="h-5 w-5 transform transition-transform duration-500 group-data-[state=open]:rotate-90" />
+                          <ChevronRight className="h-5 w-5 transform transition-transform duration-500 group-data-[state=open]:rotate-90" strokeWidth={2} />
                         </div>
                         <div>
                           <span className="block text-primary-900 font-semibold">{faq.question}</span>
@@ -168,21 +168,21 @@ export default function FaqSection() {
             <div className="flex flex-wrap justify-center gap-4">
               <SplashCursor color="hsla(var(--primary) / 0.2)">
                 <div className="flex items-center gap-3 px-5 py-3 rounded-lg bg-gradient-to-r from-primary-600 to-primary-700 text-white font-medium shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 cursor-pointer">
-                  <Phone className="h-5 w-5" />
+                  <Phone className="h-5 w-5" strokeWidth={2} />
                   <span>Call Us</span>
                 </div>
               </SplashCursor>
               
               <SplashCursor color="hsla(var(--secondary) / 0.2)">
                 <div className="flex items-center gap-3 px-5 py-3 rounded-lg bg-gradient-to-r from-secondary-600 to-secondary-700 text-white font-medium shadow-lg shadow-secondary/20 hover:shadow-xl hover:shadow-secondary/30 transition-all duration-300 cursor-pointer">
-                  <Mail className="h-5 w-5" />
+                  <Mail className="h-5 w-5" strokeWidth={2} />
                   <span>Email Support</span>
                 </div>
               </SplashCursor>
               
               <SplashCursor color="hsla(var(--accent) / 0.2)">
                 <div className="flex items-center gap-3 px-5 py-3 rounded-lg bg-gradient-to-r from-accent-600 to-accent-700 text-white font-medium shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-all duration-300 cursor-pointer">
-                  <MessageCircle className="h-5 w-5" />
+                  <MessageCircle className="h-5 w-5" strokeWidth={2} />
                   <span>Live Chat</span>
                 </div>
               </SplashCursor>

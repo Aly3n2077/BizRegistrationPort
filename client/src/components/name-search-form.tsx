@@ -170,8 +170,8 @@ export default function NameSearchForm({ onSearchResult }: NameSearchFormProps) 
             <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-accent/5 to-transparent rounded-tr-3xl"></div>
             
             <div className="flex items-center justify-center mb-6">
-              <div className="bg-gradient-to-r from-primary-600 to-primary-700 p-3 rounded-full shadow-lg shadow-primary/20">
-                <Search className="h-6 w-6 text-white" />
+              <div className="bg-gradient-to-r from-primary-600 to-primary-700 p-3 rounded-full shadow-lg shadow-primary/20 flex items-center justify-center">
+                <Search className="h-6 w-6 text-white" strokeWidth={2} />
               </div>
             </div>
             
@@ -251,12 +251,12 @@ export default function NameSearchForm({ onSearchResult }: NameSearchFormProps) 
                     >
                       {nameCheckMutation.isPending ? (
                         <>
-                          <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                          <Loader2 className="mr-2 h-5 w-5 animate-spin" strokeWidth={2} />
                           Checking Registry...
                         </>
                       ) : (
                         <>
-                          <Search className="mr-2 h-5 w-5" />
+                          <Search className="mr-2 h-5 w-5" strokeWidth={2} />
                           Check Name Availability
                         </>
                       )}
@@ -322,7 +322,7 @@ export default function NameSearchForm({ onSearchResult }: NameSearchFormProps) 
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 + (index * 0.1) }}
                   >
-                    <div className="bg-white p-2 rounded-lg shadow-sm mr-3">
+                    <div className="bg-white p-2 rounded-lg shadow-sm mr-3 flex items-center justify-center">
                       {feature.icon}
                     </div>
                     <div>
