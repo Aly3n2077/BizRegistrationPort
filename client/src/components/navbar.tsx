@@ -55,19 +55,17 @@ export default function Navbar() {
                   className="h-6 w-6"
                 />
               </div>
-              <Link href="/">
-                <a className="flex flex-col">
-                  <span className={`text-lg md:text-xl font-bold tracking-tight ${
-                    scrolled ? 'text-primary-900' : 'text-white'
-                  }`}>
-                    Zimbabwe Business
-                  </span>
-                  <span className={`text-xs font-medium -mt-1 ${
-                    scrolled ? 'text-primary-600' : 'text-primary-200'
-                  }`}>
-                    Registration Portal
-                  </span>
-                </a>
+              <Link href="/" className="flex flex-col">
+                <span className={`text-lg md:text-xl font-bold tracking-tight ${
+                  scrolled ? 'text-primary-900' : 'text-white'
+                }`}>
+                  Zimbabwe Business
+                </span>
+                <span className={`text-xs font-medium -mt-1 ${
+                  scrolled ? 'text-primary-600' : 'text-primary-200'
+                }`}>
+                  Registration Portal
+                </span>
               </Link>
             </div>
           </div>
@@ -77,8 +75,10 @@ export default function Navbar() {
             {navLinks.map((link) => {
               const isActive = location === link.href;
               return (
-                <Link key={link.href} href={link.href}>
-                  <a className={`relative px-4 py-2 rounded-lg flex items-center font-medium text-sm transition-all duration-200 group ${
+                <Link 
+                  key={link.href} 
+                  href={link.href}
+                  className={`relative px-4 py-2 rounded-lg flex items-center font-medium text-sm transition-all duration-200 group ${
                     isActive 
                       ? scrolled 
                         ? 'bg-primary-100 text-primary-900' 
@@ -86,18 +86,18 @@ export default function Navbar() {
                       : scrolled 
                         ? 'hover:bg-primary-50 text-gray-700 hover:text-primary-900' 
                         : 'hover:bg-white/10 text-white/90 hover:text-white'
-                  }`}>
-                    <span className="mr-1.5">{link.icon}</span>
-                    {link.label}
-                    {isActive && (
-                      <motion.span 
-                        className={`absolute bottom-0 left-0 h-0.5 w-full ${
-                          scrolled ? 'bg-primary-600' : 'bg-white'
-                        }`}
-                        layoutId="navbar-underline"
-                      />
-                    )}
-                  </a>
+                  }`}
+                >
+                  <span className="mr-1.5">{link.icon}</span>
+                  {link.label}
+                  {isActive && (
+                    <motion.span 
+                      className={`absolute bottom-0 left-0 h-0.5 w-full ${
+                        scrolled ? 'bg-primary-600' : 'bg-white'
+                      }`}
+                      layoutId="navbar-underline"
+                    />
+                  )}
                 </Link>
               );
             })}
@@ -144,20 +144,20 @@ export default function Navbar() {
                   {navLinks.map((link) => {
                     const isActive = location === link.href;
                     return (
-                      <Link key={link.href} href={link.href}>
-                        <a 
-                          onClick={closeSheet} 
-                          className={`flex items-center p-3 rounded-lg transition-colors ${
-                            isActive 
-                              ? 'bg-primary-100 text-primary-900 font-medium' 
-                              : 'hover:bg-gray-100 text-gray-800'
-                          }`}
-                        >
-                          <span className={`mr-3 p-1 rounded-md ${isActive ? 'bg-primary-200 text-primary-900' : 'bg-gray-100'}`}>
-                            {link.icon}
-                          </span>
-                          {link.label}
-                        </a>
+                      <Link 
+                        key={link.href} 
+                        href={link.href}
+                        onClick={closeSheet} 
+                        className={`flex items-center p-3 rounded-lg transition-colors ${
+                          isActive 
+                            ? 'bg-primary-100 text-primary-900 font-medium' 
+                            : 'hover:bg-gray-100 text-gray-800'
+                        }`}
+                      >
+                        <span className={`mr-3 p-1 rounded-md ${isActive ? 'bg-primary-200 text-primary-900' : 'bg-gray-100'}`}>
+                          {link.icon}
+                        </span>
+                        {link.label}
                       </Link>
                     );
                   })}
