@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import { AnimatedIcon } from "@/components/ui/animated-icons";
-import { SplashCursor } from "@/components/ui/splash-cursor";
+import { SplashCursor } from "@/components/ui/simple-splash-cursor";
 import { BackgroundPaths } from "@/components/ui/background-paths";
 import { Phone, MessageCircle, Mail } from "lucide-react";
 
@@ -121,7 +121,9 @@ export default function AnimatedFaqSection() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * index, duration: 0.5 }}
+                  className="relative overflow-hidden rounded-xl group"
                 >
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-primary/5 to-transparent transition-opacity duration-500 rounded-xl"></div>
                   <AccordionItem 
                     value={`item-${index}`}
                     className="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden bg-white/80 dark:bg-gray-800/80 shadow-sm transition-all duration-300 hover:shadow-md data-[state=open]:shadow-lg data-[state=open]:border-primary-200"
