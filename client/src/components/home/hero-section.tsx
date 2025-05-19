@@ -117,7 +117,7 @@ export default function HeroSection() {
           ].map((feature, index) => (
             <motion.div 
               key={index}
-              className="glass-card bg-white/90 backdrop-blur-md rounded-2xl p-8 text-center shadow-xl border border-primary-100/50 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden group"
+              className="glass-card bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-2xl p-8 text-center shadow-xl border border-primary-100/50 dark:border-gray-700/50 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden group"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: feature.delay, duration: 0.6 }}
@@ -129,12 +129,12 @@ export default function HeroSection() {
               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl opacity-10 rounded-bl-[100px]" />
               
               {/* Feature icon */}
-              <div className={`bg-gradient-to-br ${feature.gradient} h-16 w-16 rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg transform transition-transform duration-500 group-hover:rotate-6`}>
+              <div className={`bg-gradient-to-br ${feature.gradient} h-16 w-16 rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg transform transition-transform duration-500 group-hover:rotate-6 text-white`}>
                 {feature.icon}
               </div>
               
-              <h3 className="text-xl font-bold mb-3 text-primary-900">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <h3 className="text-xl font-bold mb-3 text-primary-900 dark:text-primary-100">{feature.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
               
               {/* Bottom animated accent line */}
               <div className="absolute bottom-0 left-0 h-1 w-0 group-hover:w-full bg-gradient-to-r from-primary/50 to-accent/50 transition-all duration-700" />

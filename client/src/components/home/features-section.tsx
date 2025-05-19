@@ -127,7 +127,7 @@ export default function FeaturesSection() {
             <SplashCursor key={index}>
               <motion.div 
                 variants={itemVariants}
-                className={`bg-white/95 backdrop-blur-sm rounded-2xl p-8 relative overflow-hidden border ${feature.borderColor} shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group`}
+                className={`bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-2xl p-8 relative overflow-hidden border ${feature.borderColor} dark:border-gray-700 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group`}
               >
                 {/* Animated gradient background on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
