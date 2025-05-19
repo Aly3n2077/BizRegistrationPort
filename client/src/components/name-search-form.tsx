@@ -271,8 +271,8 @@ export default function NameSearchForm({ onSearchResult }: NameSearchFormProps) 
               <motion.div 
                 className={`mt-8 p-4 rounded-xl border ${
                   searchResult.isAvailable 
-                    ? 'bg-green-50/70 border-green-200 text-green-800' 
-                    : 'bg-red-50/70 border-red-200 text-red-800'
+                    ? 'bg-green-50/70 dark:bg-green-900/30 border-green-200 dark:border-green-700 text-green-800 dark:text-green-300' 
+                    : 'bg-red-50/70 dark:bg-red-900/30 border-red-200 dark:border-red-700 text-red-800 dark:text-red-300'
                 }`}
                 variants={resultVariants}
                 initial="hidden"
@@ -280,9 +280,9 @@ export default function NameSearchForm({ onSearchResult }: NameSearchFormProps) 
               >
                 <div className="flex items-center">
                   {searchResult.isAvailable ? (
-                    <CheckCircle2 className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
+                    <CheckCircle2 className="h-6 w-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" strokeWidth={2} />
                   ) : (
-                    <AlertCircle className="h-6 w-6 text-red-500 mr-3 flex-shrink-0" />
+                    <AlertCircle className="h-6 w-6 text-red-500 dark:text-red-400 mr-3 flex-shrink-0" strokeWidth={2} />
                   )}
                   <div>
                     <h3 className="font-semibold mb-1">
