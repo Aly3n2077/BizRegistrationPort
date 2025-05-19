@@ -4,17 +4,22 @@ import { Button } from "@/components/ui/button";
 export default function HeroSection() {
   return (
     <section className="relative py-16 md:py-24 overflow-hidden">
-      {/* Hero Background */}
-      <div 
-        className="absolute inset-0 z-0" 
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1577495508048-b635879837f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080&q=80')",
-          backgroundSize: "cover", 
-          backgroundPosition: "center", 
-          opacity: 0.15
-        }}
-        aria-hidden="true"
-      ></div>
+      {/* Hero Background with Zimbabwe flag colors */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-yellow-500/10 to-red-900/20"></div>
+        <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-green-600 via-yellow-500 to-red-600"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-green-600 via-yellow-500 to-red-600"></div>
+        <div className="absolute inset-0 opacity-5">
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 0 10 L 40 10 M 10 0 L 10 40" fill="none" stroke="black" strokeWidth="0.5"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+          </svg>
+        </div>
+      </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-10">

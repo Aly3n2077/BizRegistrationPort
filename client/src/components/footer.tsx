@@ -9,19 +9,22 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-900 text-white py-8">
+    <footer className="bg-gradient-to-r from-primary-900 to-primary-800 text-white py-8 shadow-inner">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <div className="flex items-center">
-              <img 
-                src="https://images.unsplash.com/photo-1484069560501-87d72b0c3669?ixlib=rb-4.0.3&auto=format&fit=crop&w=50&h=50&q=80" 
-                alt="Zimbabwe Coat of Arms" 
-                className="h-10 mr-3"
-              />
+              <div className="relative mr-3 flex-shrink-0">
+                <div className="w-10 h-10 rounded-full border-2 border-yellow-400 flex items-center justify-center bg-gradient-to-b from-green-600 to-green-800 overflow-hidden shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+                    <path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2Z"></path>
+                  </svg>
+                  <div className="absolute bottom-0 left-0 right-0 h-2 bg-red-600"></div>
+                </div>
+              </div>
               <div>
-                <h2 className="text-xl font-bold">Zimbabwe Business Registration Portal</h2>
-                <p className="text-sm text-primary-200">Streamlining business registration nationwide</p>
+                <h2 className="text-xl font-bold text-shadow">Zimbabwe Business Registration Portal</h2>
+                <p className="text-sm text-yellow-300">Streamlining business registration nationwide</p>
               </div>
             </div>
           </div>
