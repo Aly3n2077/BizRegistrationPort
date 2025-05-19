@@ -4,11 +4,9 @@ import { Button } from "@/components/ui/button";
 export default function HeroSection() {
   return (
     <section className="relative py-16 md:py-24 overflow-hidden">
-      {/* Hero Background with Zimbabwe flag colors */}
+      {/* Hero Background with modern corporate style */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-yellow-500/10 to-red-900/20"></div>
-        <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-green-600 via-yellow-500 to-red-600"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-green-600 via-yellow-500 to-red-600"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-blue-500/5 to-blue-700/10"></div>
         <div className="absolute inset-0 opacity-5">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <defs>

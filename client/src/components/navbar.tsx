@@ -14,26 +14,27 @@ export default function Navbar() {
   const closeSheet = () => setIsOpen(false);
   
   return (
-    <header className="bg-gradient-to-r from-primary-950 to-primary-800 text-white py-4 shadow-md">
+    <header className="bg-primary-800 text-white py-4 shadow-md">
       <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center mb-4 md:mb-0">
-          {/* Zimbabwe national colors used in the crest - green, yellow, red, black */}
           <div className="relative mr-3 flex-shrink-0">
-            <div className="w-12 h-12 rounded-full border-2 border-yellow-400 flex items-center justify-center bg-gradient-to-b from-green-600 to-green-800 overflow-hidden shadow-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
-                <path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2Z"></path>
+            <div className="w-12 h-12 rounded flex items-center justify-center bg-white overflow-hidden shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
+                <path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-1" />
+                <path d="M14 16H9m-2-2v-1a1 1 0 0 1 1-1h7m-2 4v4" />
+                <path d="M3 8v11a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-8H5a2 2 0 0 1-2-2v-1z" />
+                <path d="M5 10V6a2 2 0 0 1 2-2h7.5M15 9l3-3-3-3" />
               </svg>
-              <div className="absolute bottom-0 left-0 right-0 h-3 bg-red-600"></div>
             </div>
           </div>
           <div>
             <Link href="/">
-              <h1 className="text-xl md:text-2xl font-bold font-roboto cursor-pointer text-shadow">
-                Zimbabwe Business Registration Portal
+              <h1 className="text-xl md:text-2xl font-bold font-roboto cursor-pointer">
+                Business Registration Portal
               </h1>
             </Link>
-            <p className="text-sm md:text-base text-yellow-300 font-medium">
-              Official Online Registration Service
+            <p className="text-sm md:text-base text-blue-200 font-medium">
+              Online Registration Service
             </p>
           </div>
         </div>

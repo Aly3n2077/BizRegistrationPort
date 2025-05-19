@@ -9,22 +9,24 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-primary-900 to-primary-800 text-white py-8 shadow-inner">
+    <footer className="bg-primary-900 text-white py-8 shadow-inner">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <div className="flex items-center">
               <div className="relative mr-3 flex-shrink-0">
-                <div className="w-10 h-10 rounded-full border-2 border-yellow-400 flex items-center justify-center bg-gradient-to-b from-green-600 to-green-800 overflow-hidden shadow-lg">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-                    <path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2Z"></path>
+                <div className="w-10 h-10 rounded flex items-center justify-center bg-white overflow-hidden shadow-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+                    <path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-1" />
+                    <path d="M14 16H9m-2-2v-1a1 1 0 0 1 1-1h7m-2 4v4" />
+                    <path d="M3 8v11a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-8H5a2 2 0 0 1-2-2v-1z" />
+                    <path d="M5 10V6a2 2 0 0 1 2-2h7.5M15 9l3-3-3-3" />
                   </svg>
-                  <div className="absolute bottom-0 left-0 right-0 h-2 bg-red-600"></div>
                 </div>
               </div>
               <div>
-                <h2 className="text-xl font-bold text-shadow">Zimbabwe Business Registration Portal</h2>
-                <p className="text-sm text-yellow-300">Streamlining business registration nationwide</p>
+                <h2 className="text-xl font-bold">Business Registration Portal</h2>
+                <p className="text-sm text-blue-300">Streamlining business registration</p>
               </div>
             </div>
           </div>
@@ -68,8 +70,8 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/register">
-                  <a className="text-primary-200 hover:text-white transition">Company Registration</a>
+                <Link href="/register" className="text-primary-200 hover:text-white transition">
+                  Company Registration
                 </Link>
               </li>
               <li><a href="#" className="text-primary-200 hover:text-white transition">Business Licensing</a></li>
