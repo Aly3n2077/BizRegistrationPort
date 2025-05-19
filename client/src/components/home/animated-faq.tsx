@@ -108,7 +108,7 @@ export default function AnimatedFaqSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             {/* Glass card background */}
-            <div className="absolute inset-0 bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl border border-gray-100 z-0"></div>
+            <div className="absolute inset-0 bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 z-0"></div>
             
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full"></div>
@@ -124,19 +124,19 @@ export default function AnimatedFaqSection() {
                 >
                   <AccordionItem 
                     value={`item-${index}`}
-                    className="border border-gray-100 rounded-xl overflow-hidden bg-white/80 shadow-sm transition-all duration-300 hover:shadow-md data-[state=open]:shadow-lg data-[state=open]:border-primary-200"
+                    className="border border-gray-100 dark:border-gray-700 rounded-xl overflow-hidden bg-white/80 dark:bg-gray-800/80 shadow-sm transition-all duration-300 hover:shadow-md data-[state=open]:shadow-lg data-[state=open]:border-primary-200"
                   >
                     <AccordionTrigger className="px-6 py-5 hover:bg-gradient-to-r hover:from-primary/5 hover:to-transparent transition-all duration-300 group">
                       <div className="flex items-center gap-4">
                         <AnimatedIcon icon={item.icon} size={20} />
                         <div>
-                          <span className="block text-primary-900 font-semibold text-left">{item.title}</span>
-                          <span className="text-xs text-accent-600 font-medium">{item.category}</span>
+                          <span className="block text-primary-900 dark:text-gray-100 font-semibold text-left">{item.title}</span>
+                          <span className="text-xs text-accent-600 dark:text-accent-400 font-medium">{item.category}</span>
                         </div>
                       </div>
                     </AccordionTrigger>
                     
-                    <AccordionContent className="px-6 py-5 bg-gradient-to-r from-primary/5 via-transparent to-transparent text-gray-600 border-t border-gray-100 leading-relaxed">
+                    <AccordionContent className="px-6 py-5 bg-gradient-to-r from-primary/5 via-transparent to-transparent text-gray-600 dark:text-gray-300 border-t border-gray-100 dark:border-gray-700 leading-relaxed">
                       <div className="ml-14">
                         <p className="relative">
                           {/* Left accent border */}
