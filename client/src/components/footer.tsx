@@ -18,7 +18,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="relative pt-20 pb-10 bg-gradient-to-b from-primary-900 to-primary-950 text-white overflow-hidden">
+    <footer className="relative pt-20 pb-10 bg-gradient-to-b from-primary-800 to-primary-900 dark:from-gray-900 dark:to-gray-950 text-white overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-64 overflow-hidden opacity-10">
         <div className="w-[800px] h-[800px] rounded-full bg-gradient-to-r from-primary-500 to-accent-500 blur-3xl absolute -top-[600px] -left-[200px]"></div>
@@ -37,34 +37,34 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <h2 className="text-xl font-bold text-white">Zimbabwe Business</h2>
-                <p className="text-sm text-primary-200 -mt-1">Registration Portal</p>
+                <h2 className="text-xl font-bold text-white dark:text-white">Zimbabwe Business</h2>
+                <p className="text-sm text-primary-200 dark:text-blue-200 -mt-1">Registration Portal</p>
               </div>
             </div>
             
-            <p className="text-primary-200 mb-6 max-w-md">
+            <p className="text-primary-200 dark:text-gray-300 mb-6 max-w-md">
               The official online platform for registering businesses in Zimbabwe. Our mission is to streamline 
               the registration process and promote economic growth through digital transformation.
             </p>
             
             <div className="space-y-3">
-              <a href="mailto:info@zbregister.gov.zw" className="flex items-center text-primary-200 hover:text-white transition group">
-                <Mail className="h-4 w-4 mr-3 text-primary-400 group-hover:text-primary-300" />
+              <a href="mailto:info@zbregister.gov.zw" className="flex items-center text-primary-200 dark:text-gray-300 hover:text-white transition group">
+                <Mail className="h-4 w-4 mr-3 text-primary-400 dark:text-blue-300 group-hover:text-primary-300" />
                 <span>info@zbregister.gov.zw</span>
               </a>
-              <a href="tel:+2631234567890" className="flex items-center text-primary-200 hover:text-white transition group">
-                <Phone className="h-4 w-4 mr-3 text-primary-400 group-hover:text-primary-300" />
+              <a href="tel:+2631234567890" className="flex items-center text-primary-200 dark:text-gray-300 hover:text-white transition group">
+                <Phone className="h-4 w-4 mr-3 text-primary-400 dark:text-blue-300 group-hover:text-primary-300" />
                 <span>+263 (123) 456-7890</span>
               </a>
-              <a href="#" className="flex items-center text-primary-200 hover:text-white transition group">
-                <MapPin className="h-4 w-4 mr-3 text-primary-400 group-hover:text-primary-300" />
+              <a href="#" className="flex items-center text-primary-200 dark:text-gray-300 hover:text-white transition group">
+                <MapPin className="h-4 w-4 mr-3 text-primary-400 dark:text-blue-300 group-hover:text-primary-300" />
                 <span>7th Floor, Causeway Building, Central Avenue, Harare</span>
               </a>
             </div>
           </div>
           
           <div className="md:col-span-1">
-            <h3 className="text-lg font-semibold mb-5 text-white border-b border-primary-700 pb-2">About</h3>
+            <h3 className="text-lg font-semibold mb-5 text-white dark:text-white border-b border-primary-700 dark:border-gray-700 pb-2">About</h3>
             <ul className="space-y-3">
               <li>
                 <a href="#" className="text-primary-200 hover:text-white transition-colors flex items-center group">
@@ -94,7 +94,7 @@ export default function Footer() {
           </div>
           
           <div className="md:col-span-1">
-            <h3 className="text-lg font-semibold mb-5 text-white border-b border-primary-700 pb-2">Services</h3>
+            <h3 className="text-lg font-semibold mb-5 text-white dark:text-white border-b border-primary-700 dark:border-gray-700 pb-2">Services</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/register" className="text-primary-200 hover:text-white transition-colors flex items-center group">
@@ -124,7 +124,7 @@ export default function Footer() {
           </div>
           
           <div className="md:col-span-1">
-            <h3 className="text-lg font-semibold mb-5 text-white border-b border-primary-700 pb-2">Resources</h3>
+            <h3 className="text-lg font-semibold mb-5 text-white dark:text-white border-b border-primary-700 dark:border-gray-700 pb-2">Resources</h3>
             <ul className="space-y-3">
               <li>
                 <a href="#" className="text-primary-200 hover:text-white transition-colors flex items-center group">
@@ -154,7 +154,7 @@ export default function Footer() {
           </div>
           
           <div className="md:col-span-1">
-            <h3 className="text-lg font-semibold mb-5 text-white border-b border-primary-700 pb-2">Connect</h3>
+            <h3 className="text-lg font-semibold mb-5 text-white dark:text-white border-b border-primary-700 dark:border-gray-700 pb-2">Connect</h3>
             <div className="grid grid-cols-3 gap-2">
               <a href="#" className="bg-primary-800/50 hover:bg-primary-700 p-2 rounded-lg flex items-center justify-center transition-colors group">
                 <Facebook className="h-5 w-5 text-primary-300 group-hover:text-white" />
