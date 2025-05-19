@@ -29,7 +29,7 @@ export default function CheckName() {
             <h1 className="text-2xl md:text-3xl font-bold mb-6 text-primary-900 text-center">Check Company Name Availability</h1>
             <p className="text-gray-600 mb-8 text-center">Verify if your desired company name is available before starting the registration process.</p>
             
-            <div className="glassmorphism rounded-xl p-6 md:p-8 bg-primary-50">
+            <div className="rounded-xl p-6 md:p-8 bg-white border border-gray-200 shadow-md">
               <NameSearchForm onSearchResult={handleSearchResult} />
               
               {searchResult && (

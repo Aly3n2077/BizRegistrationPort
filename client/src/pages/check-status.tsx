@@ -56,7 +56,7 @@ export default function CheckStatus() {
             <h1 className="text-2xl md:text-3xl font-bold mb-6 text-primary-900 text-center">Track Your Application Status</h1>
             <p className="text-gray-600 mb-8 text-center">Enter your application reference number to check the current status of your business registration.</p>
             
-            <div className="glassmorphism rounded-xl p-6 md:p-8 bg-primary-50">
+            <div className="rounded-xl p-6 md:p-8 bg-white border border-gray-200 shadow-md">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                   <FormField
