@@ -140,11 +140,11 @@ export default function FeaturesSection() {
                   {feature.icon}
                 </div>
                 
-                <h3 className="text-xl font-bold mb-4 text-primary-900 transition-all duration-300 group-hover:translate-x-1">
+                <h3 className="text-xl font-bold mb-4 text-primary-900 dark:text-primary-100 transition-all duration-300 group-hover:translate-x-1">
                   {feature.title}
                 </h3>
                 
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   {feature.description}
                 </p>
                 
@@ -166,7 +166,7 @@ export default function FeaturesSection() {
             <ArrowRight className="ml-1 h-5 w-5" />
           </Link>
           
-          <p className="mt-4 text-gray-500 text-sm">
+          <p className="mt-4 text-gray-500 dark:text-gray-400 text-sm">
             No credit card required to start the process
           </p>
         </motion.div>
