@@ -182,7 +182,7 @@ export default function NameSearchForm({ onSearchResult }: NameSearchFormProps) 
                   name="companyName"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-primary-800 font-medium">Company Name</FormLabel>
+                      <FormLabel className="text-gray-800 dark:text-gray-100 font-semibold">Company Name</FormLabel>
                       <FormControl>
                         <Input 
                           placeholder="Enter your desired company name" 
@@ -201,7 +201,7 @@ export default function NameSearchForm({ onSearchResult }: NameSearchFormProps) 
                     name="entityType"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-primary-800 font-medium">Entity Type</FormLabel>
+                        <FormLabel className="text-gray-800 dark:text-gray-100 font-semibold">Entity Type</FormLabel>
                         <Select
                           onValueChange={field.onChange}
                           defaultValue={field.value}
@@ -228,7 +228,7 @@ export default function NameSearchForm({ onSearchResult }: NameSearchFormProps) 
                     name="registrationNumber"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-primary-800 font-medium">Registration Number (Optional)</FormLabel>
+                        <FormLabel className="text-gray-800 dark:text-gray-100 font-semibold">Registration Number (Optional)</FormLabel>
                         <FormControl>
                           <Input 
                             placeholder="Enter existing registration number" 
