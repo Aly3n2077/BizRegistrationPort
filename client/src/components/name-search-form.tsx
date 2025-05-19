@@ -307,9 +307,9 @@ export default function NameSearchForm({ onSearchResult }: NameSearchFormProps) 
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-gradient-to-br from-secondary-50 to-white rounded-2xl p-6 shadow-lg border border-secondary-100 mb-6">
-              <h3 className="text-lg font-semibold text-secondary-900 mb-4">Why Check Name Availability?</h3>
-              <p className="text-gray-600 mb-4">
+            <div className="bg-gradient-to-br from-secondary-50 to-white dark:from-secondary-900/40 dark:to-gray-900 rounded-2xl p-6 shadow-lg border border-secondary-100 dark:border-secondary-800 mb-6">
+              <h3 className="text-lg font-semibold text-secondary-900 dark:text-secondary-100 mb-4">Why Check Name Availability?</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
                 Securing a unique business name is the first step in establishing your brand identity and legal presence in Zimbabwe.
               </p>
               
@@ -322,22 +322,22 @@ export default function NameSearchForm({ onSearchResult }: NameSearchFormProps) 
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 + (index * 0.1) }}
                   >
-                    <div className="bg-white p-2 rounded-lg shadow-sm mr-3 flex items-center justify-center">
+                    <div className="bg-white dark:bg-gray-800 p-2 rounded-lg shadow-sm mr-3 flex items-center justify-center">
                       {feature.icon}
                     </div>
                     <div>
-                      <h4 className="font-medium text-primary-900">{feature.title}</h4>
-                      <p className="text-sm text-gray-600">{feature.description}</p>
+                      <h4 className="font-medium text-primary-900 dark:text-primary-100">{feature.title}</h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">{feature.description}</p>
                     </div>
                   </motion.li>
                 ))}
               </ul>
             </div>
             
-            <div className="text-center p-4 bg-primary-50/50 rounded-xl border border-primary-100">
-              <p className="text-sm text-gray-600">
+            <div className="text-center p-4 bg-primary-50/50 dark:bg-primary-900/20 rounded-xl border border-primary-100 dark:border-primary-700">
+              <p className="text-sm text-gray-600 dark:text-gray-300">
                 After confirming name availability, you can proceed to
-                <span className="font-medium text-primary-700"> reserve the name for 30 days </span>
+                <span className="font-medium text-primary-700 dark:text-primary-300"> reserve the name for 30 days </span>
                 while you complete your company registration.
               </p>
             </div>
