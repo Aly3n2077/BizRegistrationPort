@@ -10,7 +10,7 @@ export default function FeaturesSection() {
       icon: <Zap className="h-7 w-7" />,
       title: "Fast Processing",
       description: "Complete your business registration in as little as 7-10 business days, significantly faster than traditional paper processes.",
-      color: "from-primary-600 to-primary-700",
+      color: "from-blue-500 to-blue-600",
       borderColor: "border-primary-200",
       delay: 0.1
     },
@@ -18,7 +18,7 @@ export default function FeaturesSection() {
       icon: <Shield className="h-7 w-7" />,
       title: "Secure & Confidential",
       description: "Your business information and documents are protected with enterprise-grade security and encryption technologies.",
-      color: "from-secondary-600 to-secondary-700",
+      color: "from-purple-500 to-purple-600",
       borderColor: "border-secondary-200",
       delay: 0.2
     },
@@ -26,7 +26,7 @@ export default function FeaturesSection() {
       icon: <CheckCircle className="h-7 w-7" />,
       title: "Official Recognition",
       description: "Get a government-issued certificate of incorporation recognized by all agencies and financial institutions.",
-      color: "from-accent-600 to-accent-700",
+      color: "from-teal-500 to-teal-600",
       borderColor: "border-accent-200",
       delay: 0.3
     },
@@ -34,7 +34,7 @@ export default function FeaturesSection() {
       icon: <Laptop className="h-7 w-7" />,
       title: "24/7 Access",
       description: "Submit your application and track its status anytime, anywhere, from any device with internet access.",
-      color: "from-primary-600 to-secondary-600",
+      color: "from-indigo-500 to-indigo-600",
       borderColor: "border-primary-200",
       delay: 0.4
     },
@@ -42,7 +42,7 @@ export default function FeaturesSection() {
       icon: <Phone className="h-7 w-7" />,
       title: "Dedicated Support",
       description: "Get assistance from our dedicated support team throughout the registration process.",
-      color: "from-secondary-600 to-accent-600",
+      color: "from-cyan-500 to-cyan-600",
       borderColor: "border-secondary-200",
       delay: 0.5
     },
@@ -50,7 +50,7 @@ export default function FeaturesSection() {
       icon: <DollarSign className="h-7 w-7" />,
       title: "Transparent Fees",
       description: "Clear pricing with no hidden costs. Pay official government fees directly through the platform.",
-      color: "from-accent-600 to-primary-600",
+      color: "from-amber-500 to-amber-600",
       borderColor: "border-accent-200",
       delay: 0.6
     }
@@ -136,7 +136,7 @@ export default function FeaturesSection() {
                 <div className="absolute -top-10 -right-10 w-20 h-20 transform rotate-45 bg-gradient-to-br from-primary/10 to-accent/10" />
                 
                 {/* Feature icon with gradient background */}
-                <div className={`h-16 w-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 text-white shadow-lg transform transition-all duration-500 group-hover:rotate-6 group-hover:scale-110`}>
+                <div className={`h-16 w-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 text-gray-800 dark:text-white shadow-lg transform transition-all duration-500 group-hover:rotate-6 group-hover:scale-110`}>
                   {feature.icon}
                 </div>
                 
