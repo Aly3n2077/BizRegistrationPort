@@ -9,6 +9,17 @@ export default {
       roboto: ['Roboto', 'sans-serif'],
     },
     extend: {
+      boxShadow: {
+        'soft-xl': '0 20px 27px 0 rgb(0 0 0 / 0.05)',
+        'soft-md': '0 4px 7px -1px rgb(0 0 0 / 0.04), 0 2px 4px -1px rgb(0 0 0 / 0.04)',
+        'soft-sm': '0 2px 4px -2px rgb(0 0 0 / 0.05)',
+        'inner-soft': 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
+      },
+      animation: {
+        'fade-up': 'fadeUp 0.5s ease-out',
+        'slide-down': 'slideDown 0.3s ease-out',
+        'scale-up': 'scaleUp 0.2s ease-out',
+        ...{
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
