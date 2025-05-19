@@ -96,22 +96,22 @@ export default function HeroSection() {
             {
               title: "Easy Registration",
               description: "Simple step-by-step process following Zimbabwe's business regulations with real-time guidance.",
-              icon: <FileText className="text-white h-8 w-8" />,
-              gradient: "from-primary-600 to-primary-800",
+              icon: <FileText className="h-8 w-8" />,
+              gradient: "from-blue-500 to-blue-600",
               delay: 0.1
             },
             {
               title: "Document Upload",
               description: "Securely upload all required documentation through our encrypted portal system.",
-              icon: <Upload className="text-white h-8 w-8" />,
-              gradient: "from-secondary-600 to-secondary-800",
+              icon: <Upload className="h-8 w-8" />,
+              gradient: "from-purple-500 to-purple-600",
               delay: 0.2
             },
             {
               title: "Name Availability",
               description: "Check if your desired company name is available in the national business registry before registering.",
-              icon: <Search className="text-white h-8 w-8" />,
-              gradient: "from-accent to-accent-800",
+              icon: <Search className="h-8 w-8" />,
+              gradient: "from-teal-500 to-teal-600",
               delay: 0.3
             }
           ].map((feature, index) => (
