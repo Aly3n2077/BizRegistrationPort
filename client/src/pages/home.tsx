@@ -30,7 +30,7 @@ export default function Home() {
         />
         
         {/* Gradient backdrop */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white dark:from-gray-800 dark:via-gray-800/80 dark:to-gray-800 z-0"></div>
         
         {/* Decorative elements */}
         <div className="absolute top-40 left-0 w-72 h-72 bg-primary/5 rounded-full filter blur-3xl z-0"></div>
@@ -53,13 +53,13 @@ export default function Home() {
                 Check Company Name Availability
               </h2>
               
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
                 Verify if your desired company name is available before starting the registration process.
               </p>
             </div>
             
             <motion.div 
-              className="glass-card bg-white/90 backdrop-blur-2xl rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
+              className="glass-card bg-white/90 dark:bg-gray-800/90 backdrop-blur-2xl rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.7 }}
