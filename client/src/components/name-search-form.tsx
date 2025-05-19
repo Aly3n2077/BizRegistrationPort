@@ -307,8 +307,8 @@ export default function NameSearchForm({ onSearchResult }: NameSearchFormProps) 
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-gradient-to-br from-primary-50 to-white rounded-2xl p-6 shadow-lg border border-primary-100 mb-6">
-              <h3 className="text-lg font-semibold text-primary-900 mb-4">Why Check Name Availability?</h3>
+            <div className="bg-gradient-to-br from-secondary-50 to-white rounded-2xl p-6 shadow-lg border border-secondary-100 mb-6">
+              <h3 className="text-lg font-semibold text-secondary-900 mb-4">Why Check Name Availability?</h3>
               <p className="text-gray-600 mb-4">
                 Securing a unique business name is the first step in establishing your brand identity and legal presence in Zimbabwe.
               </p>
@@ -334,10 +334,10 @@ export default function NameSearchForm({ onSearchResult }: NameSearchFormProps) 
               </ul>
             </div>
             
-            <div className="text-center p-4 bg-accent-50/50 rounded-xl border border-accent-100">
+            <div className="text-center p-4 bg-primary-50/50 rounded-xl border border-primary-100">
               <p className="text-sm text-gray-600">
                 After confirming name availability, you can proceed to
-                <span className="font-medium text-accent-700"> reserve the name for 30 days </span>
+                <span className="font-medium text-primary-700"> reserve the name for 30 days </span>
                 while you complete your company registration.
               </p>
             </div>
