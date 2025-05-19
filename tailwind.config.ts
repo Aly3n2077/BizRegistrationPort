@@ -7,6 +7,8 @@ export default {
     fontFamily: {
       noto: ['Noto Sans', 'sans-serif'],
       roboto: ['Roboto', 'sans-serif'],
+      poppins: ['Poppins', 'sans-serif'],
+      inter: ['Inter', 'sans-serif'],
     },
     extend: {
       borderRadius: {

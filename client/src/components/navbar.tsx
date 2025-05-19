@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/sheet";
 import { Menu, Home, FileText, Search, Activity, User, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { ThemeToggle } from "./ui/theme-toggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

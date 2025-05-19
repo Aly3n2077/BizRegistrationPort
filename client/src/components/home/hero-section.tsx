@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { SplashCursor } from "@/components/ui/splash-cursor";
 import { motion } from "framer-motion";
 import { BackgroundPaths } from "@/components/ui/background-paths";
+import { GradientButton } from "@/components/ui/gradient-button";
 import { ArrowRight, FileText, Upload, Search } from "lucide-react";
 
 export default function HeroSection() {
@@ -62,31 +63,26 @@ export default function HeroSection() {
           </motion.p>
           
           <div className="flex flex-wrap justify-center gap-5">
-            <SplashCursor color="hsla(var(--primary) / 0.3)">
-              <Button 
-                asChild 
-                size="lg" 
-                className="bg-gradient-to-r from-primary to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-medium py-7 px-8 rounded-xl shadow-lg shadow-primary/30 border border-primary-400/20 transition-all duration-300 transform hover:scale-105"
+            <Link href="/register">
+              <GradientButton 
+                variant="primary" 
+                size="xl" 
+                className="font-semibold"
+                icon={<ArrowRight className="h-5 w-5" />}
               >
-                <Link href="/register" className="flex items-center">
-                  <span>Start Registration</span>
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </SplashCursor>
+                Start Registration
+              </GradientButton>
+            </Link>
             
-            <SplashCursor color="hsla(var(--secondary) / 0.2)">
-              <Button 
-                asChild 
-                size="lg" 
+            <Link href="/check-status">
+              <GradientButton 
                 variant="outline" 
-                className="bg-white/80 backdrop-blur-sm hover:bg-white text-primary-800 border-primary-200 py-7 px-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                size="xl" 
+                className="font-semibold backdrop-blur-md"
               >
-                <Link href="/check-status">
-                  Check Application Status
-                </Link>
-              </Button>
-            </SplashCursor>
+                Check Application Status
+              </GradientButton>
+            </Link>
           </div>
         </motion.div>
         

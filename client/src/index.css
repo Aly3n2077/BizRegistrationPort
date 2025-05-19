@@ -97,10 +97,29 @@
   body {
     @apply font-noto antialiased bg-background text-foreground;
     font-size: 16px;
+    color-scheme: light dark;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-roboto;
+    @apply font-poppins;
+  }
+  
+  /* Better text colors and contrast */
+  h1, h2, h3 {
+    @apply text-primary font-bold tracking-tight;
+  }
+  
+  h4, h5, h6 {
+    @apply text-primary;
+  }
+  
+  p {
+    @apply text-foreground;
+  }
+  
+  /* Make links stand out */
+  a:not([class]) {
+    @apply text-primary hover:text-primary/80 underline-offset-4 decoration-primary/30 font-medium;
   }
 }
 
@@ -112,10 +131,33 @@
   box-shadow: 0 4px 24px -5px rgba(var(--primary), 0.1);
   backdrop-filter: blur(6px);
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.glass-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.25rem;
+  background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)));
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.4s ease;
+  z-index: 2;
 }
 
 .glass-card:hover {
-  box-shadow: 0 8px 32px -4px rgba(var(--primary), 0.15);
+  box-shadow: 0 8px 32px -4px rgba(var(--primary), 0.2);
+  transform: translateY(-2px);
+}
+
+.glass-card:hover:before {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Custom animations */
