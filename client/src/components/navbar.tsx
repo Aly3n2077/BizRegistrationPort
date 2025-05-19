@@ -14,11 +14,11 @@ export default function Navbar() {
   const closeSheet = () => setIsOpen(false);
   
   return (
-    <header className="bg-white border-b border-gray-100 shadow-sm">
+    <header className="bg-white border-b border-gray-200 shadow-sm">
       <div className="container mx-auto px-4 md:px-6 py-4 flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center mb-4 md:mb-0">
           <div className="relative mr-3 flex-shrink-0">
-            <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-primary overflow-hidden shadow-sm">
+            <div className="w-12 h-12 rounded-md flex items-center justify-center bg-primary overflow-hidden">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
                 <path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-1" />
                 <path d="M14 16H9m-2-2v-1a1 1 0 0 1 1-1h7m-2 4v4" />
@@ -34,13 +34,13 @@ export default function Navbar() {
               </h1>
             </Link>
             <p className="text-sm text-primary">
-              Official Registration Portal
+              Zimbabwe Registration Portal
             </p>
           </div>
         </div>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-6">
           <Link href="/" className="text-gray-700 hover:text-primary font-medium">
             Home
           </Link>
@@ -54,7 +54,7 @@ export default function Navbar() {
             Track Status
           </Link>
           <Link href="/register">
-            <Button className="bg-primary text-white">
+            <Button>
               Start Now
             </Button>
           </Link>
@@ -84,7 +84,7 @@ export default function Navbar() {
                   Track Status
                 </Link>
                 <Link href="/register" onClick={closeSheet}>
-                  <Button className="bg-primary text-white w-full mt-4">
+                  <Button className="w-full mt-4">
                     Start Registration
                   </Button>
                 </Link>
