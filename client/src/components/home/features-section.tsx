@@ -136,7 +136,7 @@ export default function FeaturesSection() {
                 <div className="absolute -top-10 -right-10 w-20 h-20 transform rotate-45 bg-gradient-to-br from-primary/10 to-accent/10" />
                 
                 {/* Feature icon with gradient background */}
-                <div className={`h-16 w-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 text-gray-800 dark:text-white shadow-lg transform transition-all duration-500 group-hover:rotate-6 group-hover:scale-110`}>
+                <div className={`h-16 w-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 text-white shadow-lg transform transition-all duration-500 group-hover:rotate-6 group-hover:scale-110`}>
                   {feature.icon}
                 </div>
                 
