@@ -65,8 +65,8 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/register">
-                  <a className="text-primary-200 hover:text-white transition">Company Registration</a>
+                <Link href="/register" className="text-primary-200 hover:text-white transition">
+                  Company Registration
                 </Link>
               </li>
               <li><a href="#" className="text-primary-200 hover:text-white transition">Business Licensing</a></li>

@@ -36,17 +36,17 @@ export default function Navbar() {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <Link href="/">
-            <a className="text-white hover:text-primary-300 transition">Home</a>
+          <Link href="/" className="text-white hover:text-primary-300 transition">
+            Home
           </Link>
-          <Link href="/register">
-            <a className="text-white hover:text-primary-300 transition">Register</a>
+          <Link href="/register" className="text-white hover:text-primary-300 transition">
+            Register
           </Link>
-          <Link href="/check-name">
-            <a className="text-white hover:text-primary-300 transition">Name Check</a>
+          <Link href="/check-name" className="text-white hover:text-primary-300 transition">
+            Name Check
           </Link>
-          <Link href="/check-status">
-            <a className="text-white hover:text-primary-300 transition">Track Status</a>
+          <Link href="/check-status" className="text-white hover:text-primary-300 transition">
+            Track Status
           </Link>
         </nav>
         
@@ -61,25 +61,17 @@ export default function Navbar() {
             </SheetTrigger>
             <SheetContent className="bg-primary-950 text-white">
               <nav className="flex flex-col space-y-4 mt-8">
-                <Link href="/" onClick={closeSheet}>
-                  <a className="text-white hover:text-primary-300 transition p-2 rounded hover:bg-primary-900">
-                    Home
-                  </a>
+                <Link href="/" onClick={closeSheet} className="text-white hover:text-primary-300 transition p-2 rounded hover:bg-primary-900">
+                  Home
                 </Link>
-                <Link href="/register" onClick={closeSheet}>
-                  <a className="text-white hover:text-primary-300 transition p-2 rounded hover:bg-primary-900">
-                    Register
-                  </a>
+                <Link href="/register" onClick={closeSheet} className="text-white hover:text-primary-300 transition p-2 rounded hover:bg-primary-900">
+                  Register
                 </Link>
-                <Link href="/check-name" onClick={closeSheet}>
-                  <a className="text-white hover:text-primary-300 transition p-2 rounded hover:bg-primary-900">
-                    Name Check
-                  </a>
+                <Link href="/check-name" onClick={closeSheet} className="text-white hover:text-primary-300 transition p-2 rounded hover:bg-primary-900">
+                  Name Check
                 </Link>
-                <Link href="/check-status" onClick={closeSheet}>
-                  <a className="text-white hover:text-primary-300 transition p-2 rounded hover:bg-primary-900">
-                    Track Status
-                  </a>
+                <Link href="/check-status" onClick={closeSheet} className="text-white hover:text-primary-300 transition p-2 rounded hover:bg-primary-900">
+                  Track Status
                 </Link>
               </nav>
             </SheetContent>
