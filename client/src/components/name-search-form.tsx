@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Loader2, Search, AlertCircle, CheckCircle2, Building2, FileType, FileCheck, CalendarDays } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { SplashCursor } from "@/components/ui/splash-cursor";
+import { SplashCursor } from "@/components/ui/simple-splash-cursor";
 import { BackgroundPaths } from "@/components/ui/background-paths";
 
 // Define validation schema for the name search form

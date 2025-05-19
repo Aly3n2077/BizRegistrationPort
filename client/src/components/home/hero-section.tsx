@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { SplashCursor } from "@/components/ui/splash-cursor";
+import { SplashCursor } from "@/components/ui/simple-splash-cursor";
 import { motion } from "framer-motion";
 import { BackgroundPaths } from "@/components/ui/background-paths";
 import { GradientButton } from "@/components/ui/gradient-button";

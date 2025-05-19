@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { SplashCursor } from "@/components/ui/splash-cursor";
+import { SplashCursor } from "@/components/ui/simple-splash-cursor";
 import { Zap, Shield, CheckCircle, Laptop, Phone, DollarSign, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { BackgroundPaths } from "@/components/ui/background-paths";

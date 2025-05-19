@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import { cn } from "@/lib/utils";
-import { SplashCursor } from "./splash-cursor";
 
 interface GradientButtonProps {
   variant?: "primary" | "secondary" | "accent" | "outline";
@@ -77,11 +76,28 @@ export function GradientButton({
     </button>
   );
   
+  const [isHovered, setIsHovered] = useState(false);
+  
   if (withSplash && !disabled) {
     return (
-      <SplashCursor color={variant === "outline" ? "rgba(var(--primary), 0.1)" : "rgba(255, 255, 255, 0.2)"}>
-        {buttonContent}
-      </SplashCursor>
+      <div className="relative overflow-hidden rounded-xl">
+        {/* Simple splash effect */}
+        <div 
+          className={`absolute inset-0 bg-white/10 dark:bg-white/5 rounded-xl transition-opacity duration-300 blur-md ${isHovered ? 'opacity-100' : 'opacity-0'}`}
+          style={{
+            background: variant === "outline" 
+              ? "radial-gradient(circle at center, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0) 70%)" 
+              : "radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%)"
+          }}
+        />
+        
+        <div 
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {buttonContent}
+        </div>
+      </div>
     );
   }
   
