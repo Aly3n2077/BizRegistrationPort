@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { ChevronRight, Phone, Mail, MessageCircle, HelpCircle } from "lucide-react";
 import { motion } from "framer-motion";
-import { SplashCursor } from "@/components/ui/splash-cursor";
+import { SplashCursor } from "@/components/ui/simple-splash-cursor";
 import { BackgroundPaths } from "@/components/ui/background-paths";
 
 export default function FaqSection() {
