@@ -65,12 +65,24 @@
   --card-foreground: 210 40% 98%;
   --border: 217 33% 17%;
   --input: 217 33% 17%;
-  --primary: 220 70% 40%;
+  
+  /* Vibrant primary blue */
+  --primary: 216 90% 45%;
   --primary-foreground: 211 100% 99%;
-  --secondary: 217 33% 17%;
+  
+  /* Rich purple secondary */
+  --secondary: 260 84% 60%;
   --secondary-foreground: 210 40% 98%;
-  --accent: 240 60% 60%;
+  
+  /* Vibrant accent color */
+  --accent: 320 84% 60%;
   --accent-foreground: 210 40% 98%;
+  
+  /* Additional accent colors */
+  --accent-teal: 175 84% 40%;
+  --accent-orange: 30 84% 55%;
+  --accent-green: 140 60% 40%;
+  
   --destructive: 0 62% 30%;
   --destructive-foreground: 210 40% 98%;
   --ring: 217 33% 17%;

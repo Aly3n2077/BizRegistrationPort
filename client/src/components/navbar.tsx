@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/sheet";
 import { Menu, Home, FileText, Search, Activity, User, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -102,7 +103,10 @@ export default function Navbar() {
               );
             })}
             
-            <div className="ml-4 flex items-center">
+            <div className="ml-4 flex items-center gap-2">
+              <div className={scrolled ? "text-primary-900" : "text-white"}>
+                <ThemeToggle />
+              </div>
               <Button 
                 variant={scrolled ? "default" : "outline"}
                 className={scrolled 
