@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+
 import HeroSection from "@/components/home/hero-section";
 import FeaturesSection from "@/components/home/features-section";
 import FaqSection from "@/components/home/faq-section";
@@ -8,27 +9,35 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Zimbabwe Business Registration Portal - Official Online Service</title>
-        <meta name="description" content="Streamlined online company registration for Zimbabwean businesses. Complete your registration quickly and easily with our official online portal." />
+        <title>Business Registration Portal - Zimbabwe</title>
+        <meta 
+          name="description" 
+          content="Streamlined online company registration service for businesses in Zimbabwe. Register your business quickly, securely, and efficiently."
+        />
       </Helmet>
-      
-      <HeroSection />
-      
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-primary-900 text-center">Check Company Name Availability</h2>
-            <p className="text-gray-600 mb-8 text-center">Verify if your desired company name is available before starting the registration process.</p>
+    
+      <main>
+        <HeroSection />
+        
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-4">Check Company Name Availability</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Verify if your desired company name is available before starting the registration process. 
+                Our system will instantly check against the national business registry.
+              </p>
+            </div>
             
-            <div className="glassmorphism rounded-xl p-6 md:p-8 bg-primary-50">
+            <div className="max-w-3xl mx-auto">
               <NameSearchForm />
             </div>
           </div>
-        </div>
-      </section>
-      
-      <FeaturesSection />
-      <FaqSection />
+        </section>
+        
+        <FeaturesSection />
+        <FaqSection />
+      </main>
     </>
   );
 }
