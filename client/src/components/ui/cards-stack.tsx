@@ -90,7 +90,7 @@ export function CardsStack({
               left: 0,
               right: 0,
               opacity: 1 - Math.abs(distance) * 0.2,
-              pointerEvents: distance === 0 ? "auto" : "none",
+              pointerEvents: distance === 0 ? "auto" as const : "none" as const,
             };
 
             let transform = "";

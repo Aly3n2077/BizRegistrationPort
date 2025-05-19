@@ -161,11 +161,9 @@ export default function FeaturesSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.5 }}
         >
-          <Link href="/register">
-            <a className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg transition-all duration-300 hover:scale-105 transform">
-              Start Your Business Registration
-              <ArrowRight className="ml-1 h-5 w-5" />
-            </a>
+          <Link href="/register" className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg transition-all duration-300 hover:scale-105 transform">
+            Start Your Business Registration
+            <ArrowRight className="ml-1 h-5 w-5" />
           </Link>
           
           <p className="mt-4 text-gray-500 text-sm">
