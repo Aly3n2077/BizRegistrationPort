@@ -1,68 +1,162 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { SplashCursor } from "@/components/ui/splash-cursor";
+import { motion } from "framer-motion";
+import { BackgroundPaths } from "@/components/ui/background-paths";
+import { ArrowRight, FileText, Upload, Search } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden">
-      {/* Hero Background with gradient */}
-      <div 
-        className="absolute inset-0 z-0 bg-gradient-to-br from-primary-900/30 via-accent-600/20 to-primary-800/30"
-        aria-hidden="true"
-      ></div>
+    <section className="relative py-24 md:py-32 overflow-hidden">
+      {/* Interactive background */}
+      <BackgroundPaths 
+        className="absolute inset-0 z-0" 
+        color="hsl(var(--primary) / 0.2)" 
+        density={24} 
+        opacity={0.3}
+      />
+      
+      {/* Gradient color orbs */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Primary orb */}
+        <div className="absolute top-1/4 -left-[20%] w-[60%] h-[60%] rounded-full bg-primary/15 animate-float blur-3xl" />
+        {/* Accent orb */}
+        <div className="absolute -bottom-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-accent/10 animate-float-delayed blur-3xl" />
+        {/* Secondary orb */}
+        <div className="absolute top-[10%] right-[5%] w-[30%] h-[30%] rounded-full bg-secondary/10 animate-float-slow blur-3xl" />
+      </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary-800 to-accent-700">
-            Register Your Business Online
+        <motion.div 
+          className="max-w-3xl mx-auto text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <div className="inline-flex items-center justify-center px-4 py-2 mb-8 rounded-full bg-primary/10 text-primary-600 font-medium text-sm backdrop-blur-sm border border-primary/20">
+            <span className="inline-block w-2 h-2 rounded-full bg-primary-500 animate-pulse mr-2"></span>
+            Official Government Approved Registration Portal
+          </div>
+          
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent leading-tight tracking-tight">
+            Register Your Business
+            <br /> 
+            <span className="relative inline-block">
+              <span>Online</span>
+              <motion.span 
+                className="absolute -bottom-1 left-0 h-2 bg-accent/40 w-full rounded-md"
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+              />
+            </span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+          
+          <motion.p 
+            className="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+          >
             Streamlined registration process for businesses across Zimbabwe - complete your company registration quickly, securely, and efficiently.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-primary-600 hover:bg-primary-700 text-white font-medium py-6 px-8 rounded-lg shadow-lg shadow-primary-600/30 transition-all duration-300 transform hover:scale-105">
-              <Link href="/register">
-                Start Registration
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="bg-white/80 backdrop-blur-sm hover:bg-white text-primary-800 border-primary-300 py-6 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-              <Link href="/check-status">
-                Check Application Status
-              </Link>
-            </Button>
+          </motion.p>
+          
+          <div className="flex flex-wrap justify-center gap-5">
+            <SplashCursor color="hsla(var(--primary) / 0.3)">
+              <Button 
+                asChild 
+                size="lg" 
+                className="bg-gradient-to-r from-primary to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-medium py-7 px-8 rounded-xl shadow-lg shadow-primary/30 border border-primary-400/20 transition-all duration-300 transform hover:scale-105"
+              >
+                <Link href="/register" className="flex items-center">
+                  <span>Start Registration</span>
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </SplashCursor>
+            
+            <SplashCursor color="hsla(var(--secondary) / 0.2)">
+              <Button 
+                asChild 
+                size="lg" 
+                variant="outline" 
+                className="bg-white/80 backdrop-blur-sm hover:bg-white text-primary-800 border-primary-200 py-7 px-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              >
+                <Link href="/check-status">
+                  Check Application Status
+                </Link>
+              </Button>
+            </SplashCursor>
           </div>
-        </div>
+        </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mt-16">
-          <div className="bg-white/90 backdrop-blur-md rounded-2xl p-8 text-center shadow-xl shadow-primary-900/5 border border-primary-100 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary-900/10">
-            <div className="bg-gradient-to-br from-primary-600 to-primary-800 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-5 shadow-lg shadow-primary-600/20">
-              <svg xmlns="http://www.w3.org/2000/svg" className="text-white h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-primary-900">Easy Registration</h3>
-            <p className="text-gray-600">Simple step-by-step process following Zimbabwe's business regulations with real-time guidance.</p>
-          </div>
-          
-          <div className="bg-white/90 backdrop-blur-md rounded-2xl p-8 text-center shadow-xl shadow-primary-900/5 border border-primary-100 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary-900/10">
-            <div className="bg-gradient-to-br from-accent-600 to-accent-800 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-5 shadow-lg shadow-accent-600/20">
-              <svg xmlns="http://www.w3.org/2000/svg" className="text-white h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-primary-900">Document Upload</h3>
-            <p className="text-gray-600">Securely upload all required documentation through our encrypted portal system.</p>
-          </div>
-          
-          <div className="bg-white/90 backdrop-blur-md rounded-2xl p-8 text-center shadow-xl shadow-primary-900/5 border border-primary-100 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary-900/10">
-            <div className="bg-gradient-to-br from-primary-800 to-accent-700 h-16 w-16 rounded-full flex items-center justify-center mx-auto mb-5 shadow-lg shadow-primary-800/20">
-              <svg xmlns="http://www.w3.org/2000/svg" className="text-white h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-primary-900">Name Availability</h3>
-            <p className="text-gray-600">Check if your desired company name is available in the national business registry before registering.</p>
-          </div>
-        </div>
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mt-20"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.8, staggerChildren: 0.1 }}
+        >
+          {[
+            {
+              title: "Easy Registration",
+              description: "Simple step-by-step process following Zimbabwe's business regulations with real-time guidance.",
+              icon: <FileText className="text-white h-8 w-8" />,
+              gradient: "from-primary-600 to-primary-800",
+              delay: 0.1
+            },
+            {
+              title: "Document Upload",
+              description: "Securely upload all required documentation through our encrypted portal system.",
+              icon: <Upload className="text-white h-8 w-8" />,
+              gradient: "from-secondary-600 to-secondary-800",
+              delay: 0.2
+            },
+            {
+              title: "Name Availability",
+              description: "Check if your desired company name is available in the national business registry before registering.",
+              icon: <Search className="text-white h-8 w-8" />,
+              gradient: "from-accent to-accent-800",
+              delay: 0.3
+            }
+          ].map((feature, index) => (
+            <motion.div 
+              key={index}
+              className="glass-card bg-white/90 backdrop-blur-md rounded-2xl p-8 text-center shadow-xl border border-primary-100/50 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl relative overflow-hidden group"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: feature.delay, duration: 0.6 }}
+            >
+              {/* Animated gradient background on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
+              
+              {/* Decorative corner accent */}
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl opacity-10 rounded-bl-[100px]" />
+              
+              {/* Feature icon */}
+              <div className={`bg-gradient-to-br ${feature.gradient} h-16 w-16 rounded-xl flex items-center justify-center mx-auto mb-5 shadow-lg transform transition-transform duration-500 group-hover:rotate-6`}>
+                {feature.icon}
+              </div>
+              
+              <h3 className="text-xl font-bold mb-3 text-primary-900">{feature.title}</h3>
+              <p className="text-gray-600">{feature.description}</p>
+              
+              {/* Bottom animated accent line */}
+              <div className="absolute bottom-0 left-0 h-1 w-0 group-hover:w-full bg-gradient-to-r from-primary/50 to-accent/50 transition-all duration-700" />
+            </motion.div>
+          ))}
+        </motion.div>
+        
+        <motion.div 
+          className="mt-16 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.9, duration: 0.5 }}
+        >
+          <span className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary-50 text-primary-800 font-medium text-sm">
+            <span className="inline-block w-2 h-2 rounded-full bg-accent"></span>
+            Over 10,000 businesses successfully registered in 2023
+          </span>
+        </motion.div>
       </div>
     </section>
   );

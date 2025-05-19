@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,12 +15,24 @@
   --card-foreground: 222 47% 11%;
   --border: 214 32% 91%;
   --input: 214 32% 91%;
-  --primary: 220 70% 40%;
+  
+  /* Vibrant primary blue */
+  --primary: 216 90% 45%;
   --primary-foreground: 211 100% 99%;
-  --secondary: 210 40% 96%;
-  --secondary-foreground: 222 47% 11%;
-  --accent: 240 60% 60%;
+  
+  /* Rich purple secondary */
+  --secondary: 260 84% 60%;
+  --secondary-foreground: 210 40% 98%;
+  
+  /* Vibrant accent color */
+  --accent: 320 84% 60%;
   --accent-foreground: 211 100% 99%;
+  
+  /* Additional accent colors */
+  --accent-teal: 175 84% 40%;
+  --accent-orange: 30 84% 55%;
+  --accent-green: 140 60% 40%;
+  
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
   --ring: 215 20% 65%;
@@ -35,11 +47,11 @@
   --sidebar-border: 217 33% 17%;
   --sidebar-ring: 215 20% 65%;
   
-  --chart-1: 210 50% 60%;
-  --chart-2: 180 50% 60%;
-  --chart-3: 150 50% 60%;
-  --chart-4: 120 50% 60%;
-  --chart-5: 90 50% 60%;
+  --chart-1: 216 90% 45%;
+  --chart-2: 260 84% 60%;
+  --chart-3: 320 84% 60%;
+  --chart-4: 175 84% 40%;
+  --chart-5: 30 84% 55%;
 }
 
 .dark {
@@ -82,6 +94,49 @@
 
 .glassmorphism {
   @apply bg-white/25 backdrop-blur-md border border-white/20 shadow-lg;
+}
+
+.glass-card {
+  box-shadow: 0 4px 24px -5px rgba(var(--primary), 0.1);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  box-shadow: 0 8px 32px -4px rgba(var(--primary), 0.15);
+}
+
+/* Custom animations */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes float-delayed {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes float-slow {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 12s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-float-slow {
+  animation: float-slow 15s ease-in-out infinite;
+  animation-delay: 1s;
 }
 
 /* Progress indicator styles */
