@@ -58,12 +58,12 @@ export default function Navbar() {
               </div>
               <Link href="/" className="flex flex-col">
                 <span className={`text-lg md:text-xl font-bold tracking-tight ${
-                  scrolled ? 'text-primary-900' : 'text-white'
+                  scrolled ? 'text-primary-900 dark:text-white' : 'text-white'
                 }`}>
                   Zimbabwe Business
                 </span>
                 <span className={`text-xs font-medium -mt-1 ${
-                  scrolled ? 'text-primary-600' : 'text-primary-200'
+                  scrolled ? 'text-primary-600 dark:text-primary-200' : 'text-primary-200'
                 }`}>
                   Registration Portal
                 </span>
